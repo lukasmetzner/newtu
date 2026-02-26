@@ -12,9 +12,15 @@ A terminal RSS news reader built with [Bubble Tea](https://github.com/charmbrace
 
 ## Install
 
+### From source
+
 ```sh
 go install github.com/lukasmetzner/newtu@latest
 ```
+
+### Pre-built binary
+
+Download the latest binary for your platform from the [Releases](https://github.com/lukasmetzner/newtu/releases) page.
 
 ## Configuration
 
