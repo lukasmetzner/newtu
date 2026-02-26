@@ -39,21 +39,22 @@ Add your feeds:
 }
 ```
 
-| Field    | Description                                      |
-|----------|--------------------------------------------------|
-| `source` | Short label shown in the Source column            |
-| `url`    | Full URL to the RSS or Atom feed                  |
+| Field    | Description                            |
+|----------|----------------------------------------|
+| `source` | Short label shown in the Source column |
+| `url`    | Full URL to the RSS or Atom feed       |
 
 ## Keybindings
 
-| Key              | Action                                    |
-|------------------|-------------------------------------------|
-| `Up` / `Down` / `j` / `l` | Navigate articles                         |
-| `Enter`          | Open selected article in browser          |
-| `/`              | Enter search mode (filter by title)       |
-| `Esc`            | Exit search mode and restore full list    |
-| `<number>` + `Enter` | Jump to article by row number        |
-| `Ctrl+C`         | Quit                                      |
+| Key              | Action                                          |
+|------------------|-------------------------------------------------|
+| `Up` / `Down` / `j` / `l` | Navigate articles                      |
+| `PgUp` / `PgDown`         | Scroll one page up / down              |
+| `Enter`                   | Open selected article in browser       |
+| `/`                       | Enter search mode (filter by title)    |
+| `Esc`                     | Exit search mode and restore full list |
+| `<number>` + `Enter`      | Jump to article by row number          |
+| `Ctrl+C`                  | Quit                                   |
 
 ## Data Storage
 
