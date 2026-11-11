@@ -6,10 +6,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/charmbracelet/bubbles/table"
-	"github.com/charmbracelet/bubbles/textinput"
-	tea "github.com/charmbracelet/bubbletea"
-	"github.com/charmbracelet/lipgloss"
+	"charm.land/bubbles/v2/table"
+	"charm.land/bubbles/v2/textinput"
+	tea "charm.land/bubbletea/v2"
+	"charm.land/lipgloss/v2"
 )
 
 // -- Styles --
@@ -89,7 +89,8 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	switch msg := msg.(type) {
 	case tea.WindowSizeMsg:
 		m.table.SetHeight(msg.Height - 3)
-		m.table.SetWidth(msg.Width)
+		// lipgloss v2: Width includes the border, so the table gets 2 columns less.
+		m.table.SetWidth(msg.Width - 2)
 		borderStyle = borderStyle.Width(msg.Width)
 		return m, nil
 
@@ -102,7 +103,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		// TODO: show error in status bar instead of silently dropping
 		return m, scheduleRefresh(m.config, m.db)
 
-	case tea.KeyMsg:
+	case tea.KeyPressMsg:
 		return m.handleKey(msg)
 	}
 
@@ -111,13 +112,13 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	return m, cmd
 }
 
-func (m model) View() string {
-	return borderStyle.Render(m.input.View(), "\n", m.table.View())
+func (m model) View() tea.View {
+	return tea.NewView(borderStyle.Render(m.input.View(), "\n", m.table.View()))
 }
 
 // -- Key handling --
 
-func (m model) handleKey(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+func (m model) handleKey(msg tea.KeyPressMsg) (tea.Model, tea.Cmd) {
 	switch msg.String() {
 	case "ctrl+c":
 		return m, tea.Quit
