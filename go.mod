@@ -5,7 +5,7 @@ go 1.26.7
 require (
 	charm.land/bubbles/v2 v2.2.1
 	charm.land/bubbletea/v2 v2.1.1
-	charm.land/lipgloss/v2 v2.1.0
+	charm.land/lipgloss/v2 v2.1.1
 	github.com/dustin/go-humanize v1.1.0
 	github.com/mmcdole/gofeed v1.5.0
 	modernc.org/sqlite v1.62.0
