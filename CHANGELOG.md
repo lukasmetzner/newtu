@@ -1,5 +1,15 @@
 # Changelog
 
+## [v0.1.2](https://github.com/lukasmetzner/newtu/releases/tag/v0.1.2)
+
+[Compare to previous version](https://github.com/lukasmetzner/newtu/compare/v0.1.1...v0.1.2)
+
+### Bug Fixes
+
+- **deps**: update module modernc.org/sqlite to v1.63.0 (#27) ([2ac9d37](https://github.com/lukasmetzner/newtu/commit/2ac9d37b6406cc040071debf81be56c039b3fb2e))
+- **deps**: update module charm.land/bubbles/v2 to v2.2.2 (#26) ([126e1d8](https://github.com/lukasmetzner/newtu/commit/126e1d8828d910a089dd6aae3214e5a8011d58d0))
+- **deps**: update module charm.land/lipgloss/v2 to v2.1.1 (#24) ([3097a0b](https://github.com/lukasmetzner/newtu/commit/3097a0bb69d32bf7b5a3a761bb18b5b45906b13b))
+
 ## [v0.1.1](https://github.com/lukasmetzner/newtu/releases/tag/v0.1.1)
 
 [Compare to previous version](https://github.com/lukasmetzner/newtu/compare/v0.1.0...v0.1.1)
