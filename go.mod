@@ -8,7 +8,7 @@ require (
 	charm.land/lipgloss/v2 v2.1.0
 	github.com/dustin/go-humanize v1.1.0
 	github.com/mmcdole/gofeed v1.5.0
-	modernc.org/sqlite v1.62.0
+	modernc.org/sqlite v1.63.0
 )
 
 require (
